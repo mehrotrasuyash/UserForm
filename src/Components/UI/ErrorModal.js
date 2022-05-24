@@ -8,6 +8,7 @@ const ErrorModal = (props) => {
     <div>
       {
         <div
+          onClick={props.onConfirm}
           className={classes.backdrop}
         /> /* The backdrop class will ensure that we don't interact with the screen at back */
       }
@@ -19,7 +20,7 @@ const ErrorModal = (props) => {
           <p>{props.message}</p>
         </div>
         <footer className={classes.actions}>
-          <Button>Okay</Button>
+          <Button onClick={props.onConfirm}>Okay</Button>
         </footer>
       </Card>
     </div>
